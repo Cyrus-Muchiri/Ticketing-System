@@ -100,25 +100,33 @@
 					<th>Book Ticket</th>
 
 					</thead>
-					<tr>
+
 						<?php
 						$count = 1;
 						foreach ($allEvents as $event) {
 							?>
+					<tr>
 							<td><?php echo $count ?></td>
 							<td><?php echo $event->event_name ?></td>
 							<td><?php echo $event->location ?></td>
-							<td><?php echo $event->attendees ?></td>
+							<td><?php echo $event->available_seats ?></td>
 							<td><?php echo $event->vipTicketPrice ?></td>
 							<td><?php echo $event->regularTicketPrice ?></td>
 							<td><?php echo date('Y-m-d', strtotime($event->date)) ?></td>
+						<?php if($event->available_seats <=0){?>
+							<td><a href="<?php echo base_url()?>booking/<?php echo $event->index_ID ?>" class="btn btn-danger btn-outline-primary btn-round disabled">Sold
+									Out</a></td>
+						<?php }else{ ?>
 							<td><a href="<?php echo base_url()?>booking/<?php echo $event->index_ID ?>" class="btn btn-primary btn-outline-primary btn-round">Book
 									Now</a></td>
+						<?php } ?>
+
+					</tr>
+
 
 							<?php
 							$count++;
 						} ?>
-					</tr>
 					</tbody>
 				</table>
 			</div>

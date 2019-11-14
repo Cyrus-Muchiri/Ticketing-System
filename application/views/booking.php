@@ -38,7 +38,7 @@
             </a>
           </li>
           <li class="active">
-                <a href="./booking.html">
+			  <a href="<?php echo base_url()?>users">
                   
                   <p>Event Details</p>
                 </a>
@@ -69,7 +69,7 @@
               <div class="collapse navbar-collapse justify-content-end" id="navigation">
             
                   <p>
-                    <a  href="index.html">Home</a>
+					  <a href="<?php echo base_url()?>index"></a>
                   </p>
                 </div>
             
@@ -108,7 +108,7 @@
                                     </span>
                                   </div>
                                   <input type="text" placeholder="Last Name..." class="form-control" name="lastname" required>
-									<input type="hiidden" class="form-control" name="event_ID" value="<?php echo $eventDetails->index_ID ?>" required>
+									<input type="hidden" class="form-control" name="event_ID" value="<?php echo $eventDetails->index_ID ?>" required>
 
 								</div>
                                 <div class="input-group no-border">
@@ -133,7 +133,7 @@
                                             <i class="now-ui-icons text_caps-small"></i>
                                           </span>
                                         </div>
-                                        <input type="number" class="form-control" placeholder="Number Of Tickets" name="ticket_no" required>
+                                        <input type="number" max="5" min="0" class="form-control" placeholder="Number Of Tickets" name="ticket_count" required>
                                       </div>
                                 
                                     <div class="input-group no-border">
@@ -144,7 +144,7 @@
                                 
                               </div>
                               <div class="card-footer text-center">
-                                <button type="button" class="btn btn-neutral btn-round btn-lg">Submit Details</button>
+                                <button type="submit" class="btn btn-neutral btn-round btn-lg">Submit Details</button>
                               </div>
                             </form>
                           </div>

@@ -101,7 +101,8 @@
 					<th>#</th>
 					<th>Event Name</th>
 					<th>Location</th>
-					<th>No. of Attendees</th>
+					<th>Max No. of Attendees</th>
+					<th>Available Seats</th>
 					<th>VIP Ticket Price</th>
 					<th>Regular Ticket Price</th>
 					<th>Date</th>
@@ -119,6 +120,7 @@
 							<td><?php echo $event->event_name ?></td>
 							<td><?php echo $event->location ?></td>
 							<td><?php echo $event->attendees ?></td>
+							<td><?php echo $event->available_seats ?></td>
 							<td><?php echo $event->vipTicketPrice ?></td>
 							<td><?php echo $event->regularTicketPrice ?></td>
 							<td><?php echo date('Y-m-d',strtotime($event->date) )?></td>

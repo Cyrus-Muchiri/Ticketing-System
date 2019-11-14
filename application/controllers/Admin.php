@@ -30,6 +30,7 @@ class Admin extends CI_Controller
 			'attendees' => $attendees,
 			'vipTicketPrice' => $vipTicketPrice,
 			'regularTicketPrice' => $regulatTicketPrice,
+			'available_seats' => $attendees,
 			'date' => $date
 		);
 		$this->admin_model->addEvent($data);
