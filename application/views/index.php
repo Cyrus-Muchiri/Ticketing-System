@@ -71,12 +71,12 @@
               <h3>Ticket Booking System</h3>
 
               <li class="active ">
-                  <a href="admin.html">
+                  <a href="<?php echo base_url()?>admin">
               <h3 class="h1-seo"> Enter As Admin</h2>
             </a>
               </li>
               <li class="active ">
-                  <a href="users.html">
+				  <a href="<?php echo base_url()?>users">
               <h3 class="h1-seo"> Enter As User</h2>
             </a>
               </li>

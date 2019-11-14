@@ -51,8 +51,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'Ticketing';
 $route['index'] = 'Ticketing/index';
+$route['admin'] = 'Ticketing/admin';
+$route['addEvent'] = 'Admin/addEvent';
+$route['removeEvent/(:num)'] = 'Admin/removeEvent/$1';
 $route['users'] = 'Ticketing/users';
-$route['booking'] = 'Ticketing/booking';
+$route['booking/(:num)'] = 'Ticketing/booking/$1';
+$route['bookEvent'] = 'Users/bookEvent';
 $route['dashboard'] = 'Ticketing/dashboard';
 $route['events'] = 'Ticketing/events';
 

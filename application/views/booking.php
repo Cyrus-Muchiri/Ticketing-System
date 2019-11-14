@@ -79,7 +79,7 @@
       <!-- End Navbar -->
       <div class="panel-header">
         <div class="header text-center">
-          <h2 class="title">Fill in The Form to Complete Your Booking</h2>
+          <h2 class="title">Fill in The Form to Complete Your Booking to <u><?php echo $eventDetails->event_name ?></u></h2>
           
         </div>
       </div>
@@ -87,7 +87,7 @@
           <div class="row">
             <div class="col-md-6">
                     <div class="card card-signup" data-background-color="white">
-                            <form class="form" method="POST" action="">
+                            <form class="form" method="POST" action="<?php echo base_url()?>bookEvent">
                               <div class="card-header text-center">
                                 <h3 class="card-title title-up">Fill in the Form To Complete Booking</h3>
                                 
@@ -108,7 +108,9 @@
                                     </span>
                                   </div>
                                   <input type="text" placeholder="Last Name..." class="form-control" name="lastname" required>
-                                </div>
+									<input type="hiidden" class="form-control" name="event_ID" value="<?php echo $eventDetails->index_ID ?>" required>
+
+								</div>
                                 <div class="input-group no-border">
                                   <div class="input-group-prepend">
                                     <span class="input-group-text">

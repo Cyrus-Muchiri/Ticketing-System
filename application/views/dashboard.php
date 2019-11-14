@@ -32,12 +32,12 @@
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
           <li class="active ">
-            <a href="./admin.html">
+			  <a href="<?php echo base_url()?>admin">
               <p>ADMIN PANEL</p>
             </a>
           </li>
           <li>
-              <a href="./events.html">
+			  <a href="<?php echo base_url()?>events">
                 <p>Events</p>
               </a>
             </li>
@@ -68,7 +68,8 @@
           <div class="collapse navbar-collapse justify-content-end" id="navigation">
             
             <p>
-              <a  href="index.html">Home</a>
+				<a href="<?php echo base_url()?>index">
+					Home</a>
             </p>
 
           </div>
